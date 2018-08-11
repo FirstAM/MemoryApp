@@ -7,22 +7,22 @@
     tools:context=".SecondActivity">
 
     <EditText
-        android:id="@+id/Second"
-        android:layout_width="151dp"
+        android:id="@+id/Exercise"
+        android:layout_width="120dp"
         android:layout_height="45dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="120dp"
+        android:layout_marginTop="16dp"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.036"
+        app:layout_constraintHorizontal_bias="0.032"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:text="Второй подход" />
+        tools:text="Упражнение" />
 
     <EditText
-        android:id="@+id/Ferst"
+        android:id="@+id/First"
         android:layout_width="151dp"
         android:layout_height="45dp"
         android:layout_marginEnd="8dp"
@@ -37,49 +37,55 @@
         tools:text="Первый подход" />
 
     <EditText
-        android:id="@+id/Exerscies"
-        android:layout_width="120dp"
+        android:id="@+id/Second"
+        android:layout_width="151dp"
         android:layout_height="45dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="120dp"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.032"
+        app:layout_constraintHorizontal_bias="0.036"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:text="Упражнение" />
+        tools:text="Второй подход" />
 
     <Button
         android:id="@+id/Add"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="176dp"
-        tools:text="Добавить " />
+        android:layout_marginTop="11dp"
+        android:text="Добавить "
+        app:layout_constraintTop_toBottomOf="@+id/Second"
+        tools:layout_editor_absoluteX="16dp" />
 
     <Button
         android:id="@+id/Read"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="136dp"
-        tools:layout_editor_absoluteY="176dp"
-        tools:text="Вывести" />
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="11dp"
+        android:text="Вывести"
+        app:layout_constraintStart_toEndOf="@+id/Add"
+        app:layout_constraintTop_toBottomOf="@+id/Second" />
 
     <Button
         android:id="@+id/Delete"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="247dp"
-        tools:layout_editor_absoluteY="176dp"
-        tools:text="Удалить" />
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="11dp"
+        android:text="Очистить"
+        app:layout_constraintStart_toEndOf="@+id/Read"
+        app:layout_constraintTop_toBottomOf="@+id/Second" />
 
     <TableLayout
         android:layout_width="368dp"
         android:layout_height="256dp"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="239dp">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="252dp">
 
     </TableLayout>
 
@@ -87,30 +93,40 @@
         android:id="@+id/ViewEx"
         android:layout_width="129dp"
         android:layout_height="22dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="252dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="272dp"
         android:text="Упражнение"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/View1"
-        android:layout_width="98dp"
+        android:layout_width="wrap_content"
         android:layout_height="24dp"
-        android:layout_marginEnd="96dp"
-        android:layout_marginTop="256dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
         android:text="Подход"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toEndOf="@+id/ViewEx"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <TextView
         android:id="@+id/View2"
-        android:layout_width="98dp"
+        android:layout_width="wrap_content"
         android:layout_height="22dp"
-        android:layout_marginEnd="96dp"
+        android:layout_marginStart="32dp"
         android:layout_marginTop="16dp"
         android:text="Подход"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ViewEx"
         app:layout_constraintTop_toBottomOf="@+id/View1" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="272dp"
+        android:text="Количетво раз:"
+        app:layout_constraintStart_toEndOf="@+id/ViewEx"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </android.support.constraint.ConstraintLayout>
